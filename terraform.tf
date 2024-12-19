@@ -1,10 +1,10 @@
-terraform { 
-  cloud { 
-    
-    organization = "azurem_aws" 
+terraform {
+  cloud {
 
-    workspaces { 
-      name = "azurem_vm_launch" 
-    } 
-  } 
+    organization = "azurem_aws"
+
+    workspaces {
+      name = "azurem_vm_launch"
+    }
+  }
 } 
