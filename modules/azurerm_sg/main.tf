@@ -1,7 +1,7 @@
-resource "azurerm_network_security_group" "azurem-sg" {
-  name                = "azurem_sg"
-  location            = var.azurem_rg_location
-  resource_group_name = var.azurem_rg_name
+resource "azurerm_network_security_group" "azurerm-sg" {
+  name                = "azurerm_sg"
+  location            = var.azurerm_rg_location
+  resource_group_name = var.azurerm_rg_name
 
   security_rule {
     name                       = "ssh"
@@ -29,13 +29,13 @@ resource "azurerm_network_security_group" "azurem-sg" {
 
   # Optional ports
     security_rule {
-    name                       = "python-server-port"
+    name                       = "Allow all inbound"
     priority                   = 105
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "8000"
+    destination_port_range     = "*"
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
@@ -55,7 +55,7 @@ resource "azurerm_network_security_group" "azurem-sg" {
 
 }
 
-output "azurem_sg_id" {
-    value = azurerm_network_security_group.azurem-sg.id
+output "azurerm_sg_id" {
+    value = azurerm_network_security_group.azurerm-sg.id
   
 }

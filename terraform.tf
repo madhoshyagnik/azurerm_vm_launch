@@ -1,10 +1,10 @@
 terraform {
   cloud {
 
-    organization = "azurem"
+    organization = "azurerm_madhosh"
 
     workspaces {
-      name = "azurem_vm"
+      name = "azurerm_vm_launch"
     }
   }
 } 
