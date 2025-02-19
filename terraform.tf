@@ -1,10 +1,10 @@
-terraform {
-  cloud {
+terraform { 
+  cloud { 
+    
+    organization = "azurerm_madhosh" 
 
-    organization = "azurerm_madhosh"
-
-    workspaces {
-      name = "azurerm_vm_launch"
-    }
-  }
-} 
+    workspaces { 
+      name = "azurerm_vm_launch" 
+    } 
+  } 
+}

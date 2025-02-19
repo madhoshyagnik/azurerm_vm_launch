@@ -12,7 +12,7 @@ module "azurerm_security_group" {
   azurerm_rg_location = module.azurerm_resource_group.azurerm_rg_location
 }
 
-resource "azurerm_network_interfacazureme" "azurerm-eni" {
+resource "azurerm_network_interface" "azurerm-eni" {
   name                = "azurerm-eni"
   location            = module.azurerm_resource_group.azurerm_rg_location
   resource_group_name = module.azurerm_resource_group.azurerm_rg_name
